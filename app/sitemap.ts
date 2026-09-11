@@ -1,0 +1,2 @@
+import type { MetadataRoute } from 'next'; import { company, services } from '@/lib/config';
+export default function sitemap():MetadataRoute.Sitemap {const routes=['','/about','/why-spoorthi','/insights','/privacy','/terms','/disclaimer',...services.map(s=>`/services/${s.slug}`)];return routes.map(route=>({url:`${company.domain}${route}`,lastModified:new Date(),changeFrequency:route===''?'weekly':'monthly',priority:route===''?1:.7}))}

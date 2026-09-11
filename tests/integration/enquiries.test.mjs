@@ -1,0 +1,4 @@
+import test from 'node:test'; import assert from 'node:assert/strict';
+const origin=process.env.SITE_TEST_URL||'http://localhost:3000';
+test('enquiry API rejects invalid data',async()=>{const response=await fetch(`${origin}/api/enquiries`,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({name:'A',phone:'1',service:'GENERAL'})});assert.equal(response.status,400)});
+test('enquiry API persists valid data and returns a reference',async()=>{const phone=`9${String(Date.now()).slice(-9)}`;const response=await fetch(`${origin}/api/enquiries`,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({name:'Integration QA',phone,service:'GENERAL',callback:'Any convenient time',message:'Integration test of durable enquiry storage.',website:''})});assert.equal(response.status,201);const body=await response.json();assert.match(body.reference,/^SG-\d{4}-\d{6}$/)});
