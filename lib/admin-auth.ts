@@ -1,10 +1,17 @@
-import { env } from 'cloudflare:workers';
-import { getChatGPTUser } from '@/app/chatgpt-auth';
+import 'server-only';
+import { redirect } from 'next/navigation';
+import { createAuthClient } from './supabase/server';
+import { canAccessAdmin } from './admin-access';
 
 export async function getAuthorizedAdmin() {
-  const user = await getChatGPTUser();
-  if (!user) return null;
-  const configured = (env.ADMIN_EMAILS || '').split(',').map((email) => email.trim().toLowerCase()).filter(Boolean);
-  const localPreview = user.email.endsWith('@sites.test');
-  return configured.includes(user.email.toLowerCase()) || localPreview ? user : null;
+  const client = await createAuthClient();
+  if (!client) return null;
+  const { data: { user }, error } = await client.auth.getUser();
+  if (error || !user?.email || !canAccessAdmin(user.email, process.env.ADMIN_EMAILS || '')) return null;
+  return { userId: user.id, email: user.email, displayName: user.email };
+}
+export async function requireAdmin() {
+  const user = await getAuthorizedAdmin();
+  if (!user) redirect('/admin/login');
+  return user;
 }
