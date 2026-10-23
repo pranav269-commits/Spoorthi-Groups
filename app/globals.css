@@ -316,3 +316,4 @@ button { color:inherit; }
 @media(prefers-reduced-motion:reduce){.service-motion-poster:before,.service-motion-poster:after,.service-motion-poster>span,.service-motion-poster>i{animation:none}}
 .partner-logo{display:flex;align-items:center;height:55px;padding:.45rem .65rem;background:white}.partner-logo img{display:block;max-width:180px;max-height:42px;width:auto;height:auto;object-fit:contain}
 .service-cinema-copy h1{color:white}
+.admin-login { min-height:100vh; display:grid; align-content:center; justify-items:center; gap:1.5rem; padding:2rem 1rem; background:#f3f6f7; } .admin-login > a > img { width:120px; height:90px; object-fit:contain; } .admin-login .form-card { width:min(100%,460px); } .admin-login h1 { font-size:2rem; margin:.5rem 0 1.5rem; } .admin-login > a { font-size:.85rem; } .admin-header form button { border:0; background:transparent; color:var(--teal); cursor:pointer; }
