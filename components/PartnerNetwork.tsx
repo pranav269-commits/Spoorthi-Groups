@@ -9,6 +9,8 @@ const categories: { value: PartnerCategory; label: string }[] = [
   { value: 'HEALTH_INSURANCE', label: 'Health insurance' },
   { value: 'LIFE_INSURANCE', label: 'Life insurance' },
   { value: 'LOANS', label: 'Loans' },
+  { value: 'EDUCATION_LOANS', label: 'Education loans' },
+  { value: 'GENERAL_INSURANCE', label: 'General insurance' },
   { value: 'REAL_ESTATE', label: 'Real estate' },
 ];
 
@@ -19,7 +21,7 @@ export function PartnerNetwork() {
 
   return <section className="partner-network" aria-labelledby="partner-title">
     <div className="provider-glow" aria-hidden="true" />
-    <div className="partner-intro"><p className="eyebrow light"><span/> Provider network</p><h2 id="partner-title">Trusted names.<br/><em>One clearer route.</em></h2><p>Spoorthi Groups helps families navigate relevant providers across five connected needs. Select a category to explore the names referenced in company materials.</p><div className="network-metric"><b>{partners.filter((partner)=>partner.status !== 'REQUIRES_VERIFICATION').length}</b><span>provider references<br/>across 5 service areas</span></div></div>
+    <div className="partner-intro"><p className="eyebrow light"><span/> Provider network</p><h2 id="partner-title">Trusted names.<br/><em>One clearer route.</em></h2><p>Spoorthi Groups helps families navigate relevant providers across seven connected needs. Select a category to explore the names referenced in company materials.</p><div className="network-metric"><b>{partners.filter((partner)=>partner.status !== 'REQUIRES_VERIFICATION').length}</b><span>provider references<br/>across 7 service areas</span></div></div>
     <div className="partner-panel">
       <div className="partner-tabs" role="tablist" aria-label="Provider categories">{categories.map((category)=><button type="button" role="tab" aria-selected={active===category.value} className={active===category.value?'active':''} onClick={()=>setActive(category.value)} key={category.value}>{category.label}</button>)}</div>
       <div className="partner-stage" role="tabpanel">

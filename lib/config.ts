@@ -70,7 +70,7 @@ export const services = [
 
 export type ServiceSlug = (typeof services)[number]['slug'];
 
-export type PartnerCategory = 'CHITS' | 'HEALTH_INSURANCE' | 'LIFE_INSURANCE' | 'LOANS' | 'REAL_ESTATE';
+export type PartnerCategory = 'CHITS' | 'HEALTH_INSURANCE' | 'LIFE_INSURANCE' | 'LOANS' | 'EDUCATION_LOANS' | 'GENERAL_INSURANCE' | 'REAL_ESTATE';
 export type PartnerStatus = 'VERIFIED' | 'HISTORICAL' | 'INACTIVE' | 'REQUIRES_VERIFICATION';
 export type Partner = { name: string; category: PartnerCategory; status: PartnerStatus; officialUrl?: string; logo?: string };
 
@@ -82,7 +82,21 @@ export const partners: Partner[] = [
   { name: 'Star Health Insurance', category: 'HEALTH_INSURANCE', status: 'HISTORICAL', officialUrl: 'https://www.starhealth.in/', logo: '/partners/health-insurance/star-health.svg' },
   { name: 'Care Health Insurance', category: 'HEALTH_INSURANCE', status: 'HISTORICAL', officialUrl: 'https://www.careinsurance.com/', logo: '/partners/health-insurance/care-health.svg' },
   { name: 'Aditya Birla Health Insurance Co. Limited', category: 'HEALTH_INSURANCE', status: 'HISTORICAL', officialUrl: 'https://www.adityabirlacapital.com/healthinsurance/home', logo: '/partners/health-insurance/aditya-birla-health.png' },
+  { name: 'HDFC ERGO General Insurance Company Limited', category: 'HEALTH_INSURANCE', status: 'HISTORICAL', officialUrl: 'https://www.hdfcergo.com/', logo: '/partners/health-insurance/hdfc-ergo.png' },
   { name: 'Life Insurance Corporation of India (LIC)', category: 'LIFE_INSURANCE', status: 'HISTORICAL', officialUrl: 'https://licindia.in/', logo: '/partners/life-insurance/lic.png' },
+  { name: 'ICICI Life Insurance Limited', category: 'LIFE_INSURANCE', status: 'HISTORICAL', officialUrl: 'https://www.icicilife.com/', logo: '/partners/life-insurance/icici-life.png' },
+  { name: 'Tata AIA Life Insurance Company Limited', category: 'LIFE_INSURANCE', status: 'HISTORICAL', officialUrl: 'https://www.tataaia.com/', logo: '/partners/life-insurance/tata-aia-life.png' },
+  { name: 'ICICI Bank', category: 'LOANS', status: 'HISTORICAL', officialUrl: 'https://www.icicibank.com/', logo: '/partners/loans/icici-bank.svg' },
+  { name: 'Aditya Birla Housing Finance Limited', category: 'LOANS', status: 'HISTORICAL', officialUrl: 'https://homefinance.adityabirlacapital.com/', logo: '/partners/loans/aditya-birla-housing-finance.png' },
+  { name: 'Cholamandalam Investment and Finance Company Limited', category: 'LOANS', status: 'HISTORICAL', officialUrl: 'https://www.cholamandalam.com/', logo: '/partners/loans/chola.png' },
+  { name: 'Piramal Finance Limited', category: 'LOANS', status: 'HISTORICAL', officialUrl: 'https://www.piramalfinance.com/', logo: '/partners/loans/piramal-finance.png' },
+  { name: 'Credila Financial Services Limited', category: 'EDUCATION_LOANS', status: 'HISTORICAL', officialUrl: 'https://www.credila.com/', logo: '/partners/education-loans/credila.png' },
+  { name: 'Avanse Financial Services Limited', category: 'EDUCATION_LOANS', status: 'HISTORICAL', officialUrl: 'https://www.avanse.com/', logo: '/partners/education-loans/avanse.jpg' },
+  { name: 'IDFC FIRST Bank', category: 'EDUCATION_LOANS', status: 'HISTORICAL', officialUrl: 'https://www.idfcfirst.bank.in/', logo: '/partners/education-loans/idfc-first-bank.svg' },
+  { name: 'Tata Capital Limited', category: 'EDUCATION_LOANS', status: 'HISTORICAL', officialUrl: 'https://www.tatacapital.com/', logo: '/partners/education-loans/tata-capital.jpg' },
+  { name: 'Go Digit General Insurance Limited', category: 'GENERAL_INSURANCE', status: 'HISTORICAL', officialUrl: 'https://www.godigit.com/' },
+  { name: 'Tata AIG General Insurance Company Limited', category: 'GENERAL_INSURANCE', status: 'HISTORICAL', officialUrl: 'https://www.tataaig.com/' },
+  { name: 'IFFCO-TOKIO General Insurance Company Limited', category: 'GENERAL_INSURANCE', status: 'HISTORICAL', officialUrl: 'https://www.iffcotokio.co.in/', logo: '/partners/general-insurance/iffco-tokio.png' },
   { name: 'Kapil Properties', category: 'REAL_ESTATE', status: 'HISTORICAL', officialUrl: 'https://kapilproperties.com/', logo: '/partners/real-estate/kapil-properties.svg' },
   { name: 'Building Blocks Group (BBG India)', category: 'REAL_ESTATE', status: 'HISTORICAL', officialUrl: 'https://www.bbgindia.com/' },
 ];
