@@ -7,7 +7,7 @@ export const company = {
   email: 'spoorthigroups22@gmail.com',
   address: ['SLR Colony', 'Laxmi Nagar', 'Gundlapochampally', 'Hyderabad, Telangana 500100'],
   addressStatus: 'REQUIRES_VERIFICATION' as const,
-  domain: 'https://spoorthigrps.in',
+  domain: 'https://spoorthigroups.in',
   logo: '/brand/spoorthi-groups-logo.png',
 };
 

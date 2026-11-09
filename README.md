@@ -23,7 +23,7 @@ The Sites scaffold supplies a project-local D1 database and local ChatGPT sign-i
 
 ## Environment
 
-Copy `.env.example` to `.env.local` for local configuration. Set `ADMIN_EMAILS` to a comma-separated list of signed-in email addresses that may use `/admin`. When connecting the final domain, set `NEXT_PUBLIC_SITE_URL=https://spoorthigrps.in`.
+Copy `.env.example` to `.env.local` for local configuration. Set `ADMIN_EMAILS` to a comma-separated list of signed-in email addresses that may use `/admin`. When connecting the final domain, set `NEXT_PUBLIC_SITE_URL=https://spoorthigroups.in`.
 
 Email notifications are intentionally inactive until a real provider is integrated and `EMAIL_API_KEY` plus `NOTIFICATION_EMAIL` are configured. The enquiry database works without email.
 
@@ -51,7 +51,7 @@ The `/admin` route uses Sites-managed Sign in with ChatGPT for authentication an
 
 ## Deployment and domain
 
-Publish through Sites so the D1 binding, sign-in routes and Cloudflare Worker runtime are provisioned together. After deployment, configure the `ADMIN_EMAILS` runtime value in Sites. To connect `spoorthigrps.in`, add it as a custom Sites domain, copy the exact DNS records Sites provides into the domain registrar, wait for verification and then set `NEXT_PUBLIC_SITE_URL` to the final HTTPS origin before the next production version.
+Publish through Sites so the D1 binding, sign-in routes and Cloudflare Worker runtime are provisioned together. After deployment, configure the `ADMIN_EMAILS` runtime value in Sites. To connect `spoorthigroups.in`, add it as a custom Sites domain, copy the exact DNS records Sites provides into the domain registrar, wait for verification and then set `NEXT_PUBLIC_SITE_URL` to the final HTTPS origin before the next production version.
 
 ## Business data requiring verification
 
