@@ -10,8 +10,9 @@ export default function Home() {
   return <PublicShell><main id="main-content">
     <section className="premium-home-hero">
       <video className="hero-cinematic hero-video" autoPlay muted loop playsInline poster="/media/joint-family-hero-v2.png" aria-label="A multigenerational Indian family sharing a joyful evening together at home">
-        <source src="/media/family-cinematic-loop.mp4" type="video/mp4" />
+        <source src="/media/family-cinematic-loop.mp4" type="video/mp4" media="(min-width: 601px)" />
       </video>
+      <img className="hero-cinematic hero-still" src="/media/hero-mobile.jpg" alt="" aria-hidden="true" />
       <span className="hero-shade" aria-hidden="true"/><span className="protection-orbit orbit-one" aria-hidden="true"/><span className="protection-orbit orbit-two" aria-hidden="true"/>
       <div className="hero-signet"><img src={company.logo} alt="Spoorthi Groups"/><span>Guidance for generations</span></div>
       <div className="hero-copy cinematic-copy"><p className="eyebrow light"><span /> Financial guidance for Hyderabad families</p><h1>Important decisions feel easier <em>with the right guidance.</em></h1><p className="hero-intro">Spoorthi Groups helps families explore chits, insurance, loans and property opportunities through clear conversations and personal guidance.</p><div className="hero-actions"><a className="button button-primary" href="#services">Explore our services <span>→</span></a><a className="button glass-button" href="#enquire">Speak with Spoorthi Groups</a><a className="hero-whatsapp" href={createWhatsAppLink()} target="_blank" rel="noreferrer">Continue on WhatsApp ↗</a></div><div className="trust-line"><span>Clear explanations</span><span>Personal assistance</span><span>One connected relationship</span></div></div>
