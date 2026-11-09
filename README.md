@@ -1,6 +1,6 @@
 # Spoorthi Groups digital flagship
 
-Production-oriented public website and enquiry operations portal for Spoorthi Groups. The project uses Vinext/Next App Router, React, TypeScript, Tailwind CSS, Cloudflare D1, Drizzle schema definitions and Sites hosting.
+Production-oriented public website and enquiry operations portal for Spoorthi Groups. The project uses Vinext/Next App Router, React, TypeScript, Tailwind CSS, Cloudflare D1, Drizzle schema definitions and Cloudflare Workers hosting.
 
 ## Architecture
 
@@ -19,17 +19,26 @@ npm install
 npm run dev
 ```
 
-The Sites scaffold supplies a project-local D1 database and local ChatGPT sign-in identity.
+The local D1 database is supplied by the Vinext/Cloudflare Vite plugin
+(`vite.config.ts` wires the `DB` binding from `.openai/hosting.json`).
+
+For local admin testing, put a test-only password in `.dev.vars`
+(gitignored, never a real password):
+
+```bash
+ADMIN_PASSWORD=change-me-locally-only
+```
 
 ## Environment
 
-Copy `.env.example` to `.env.local` for local configuration. Set `ADMIN_EMAILS` to a comma-separated list of signed-in email addresses that may use `/admin`. When connecting the final domain, set `NEXT_PUBLIC_SITE_URL=https://spoorthigroups.in`.
+Copy `.env.example` to `.env.local` for local configuration. When connecting the final domain, set `NEXT_PUBLIC_SITE_URL=https://spoorthigroups.in`.
 
 Email notifications are intentionally inactive until a real provider is integrated and `EMAIL_API_KEY` plus `NOTIFICATION_EMAIL` are configured. The enquiry database works without email.
 
 ## Database
 
-The `DB` binding is declared in `.openai/hosting.json`. Tables and indexes are initialized safely at runtime and represented by the checked-in Drizzle schema and SQL migration.
+The `DB` binding is declared in `wrangler.jsonc` (single source of truth for
+local dev and deploy). Tables and indexes are initialized safely at runtime and represented by the checked-in Drizzle schema and SQL migration.
 
 ```bash
 npm run db:generate
@@ -47,11 +56,31 @@ npm run build
 
 ## Admin setup
 
-The `/admin` route uses Sites-managed Sign in with ChatGPT for authentication and a server-side `ADMIN_EMAILS` allowlist for authorization. The portal reads real D1 data, supports search/filtering, status changes, notes, click-to-call, WhatsApp, email and CSV export.
+The `/admin` route uses a password login (`/admin/login`). The admin identity
+is the company email `spoorthigroups22@gmail.com`; the password comes from
+the `ADMIN_PASSWORD` secret and is never stored in the repo. A successful
+login sets a signed, HttpOnly session cookie (7 days). The portal reads real
+D1 data, supports search/filtering, status changes, notes, click-to-call,
+WhatsApp, email and CSV export.
+
+Set the production password in Cloudflare (see `DEPLOY.md`):
+
+```bash
+npx wrangler secret put ADMIN_PASSWORD
+```
+
+Optional: `ADMIN_SESSION_SECRET` signs the session cookies separately; if it
+is unset, `ADMIN_PASSWORD` is used as the signing key instead.
 
 ## Deployment and domain
 
-Publish through Sites so the D1 binding, sign-in routes and Cloudflare Worker runtime are provisioned together. After deployment, configure the `ADMIN_EMAILS` runtime value in Sites. To connect `spoorthigroups.in`, add it as a custom Sites domain, copy the exact DNS records Sites provides into the domain registrar, wait for verification and then set `NEXT_PUBLIC_SITE_URL` to the final HTTPS origin before the next production version.
+See `DEPLOY.md` for the full Cloudflare Workers deployment steps: create the
+D1 database, fill in its `database_id` in `wrangler.jsonc`, set the
+`ADMIN_PASSWORD` secret, then run `npx @vinext/cloudflare deploy`. To connect
+`spoorthigroups.in`, add it as a custom domain on the Worker in the Cloudflare
+dashboard, then point the domain's DNS at Cloudflare from the registrar. No
+code change is needed for the domain — `NEXT_PUBLIC_SITE_URL` is already
+`https://spoorthigroups.in` in `wrangler.jsonc` and `lib/config.ts`.
 
 ## Business data requiring verification
 

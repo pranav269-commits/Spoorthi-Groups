@@ -235,6 +235,7 @@ button { color:inherit; }
 .admin-header > div { display:flex; align-items:center; gap:1rem; font-size:.78rem; }
 .admin-header > div span { color:var(--muted); }
 .admin-header > div a { color:var(--teal); }
+.admin-header > div form button { border:0; background:none; padding:0; color:var(--teal); cursor:pointer; font:inherit; }
 .admin-title { display:flex; justify-content:space-between; align-items:end; padding:4rem clamp(1rem,4vw,4rem) 2rem; }
 .admin-title p { margin:0; color:var(--teal); text-transform:uppercase; letter-spacing:.13em; font-size:.68rem; font-weight:900; }
 .admin-title h1 { margin:.3rem 0 0; font-size:clamp(2.5rem,5vw,4.5rem); }

@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "spoorthi-groups",
+  // No "main" and no "compatibility_flags" here on purpose. The vinext
+  // build generates the Worker entry, and vite.config.ts already sets
+  // nodejs_compat for local dev — duplicating that flag in this file breaks
+  // the local dev server (Miniflare fails to start). `npx @vinext/cloudflare
+  // deploy` supplies both at deploy time.
+  "compatibility_date": "2026-01-01",
+  "vars": {
+    "NEXT_PUBLIC_SITE_URL": "https://spoorthigroups.in"
+  },
+  // D1 database for enquiries. Create it first (see DEPLOY.md) and replace
+  // the placeholder database_id below with the real id from
+  // `npx wrangler d1 create spoorthi-groups`. Until then, deploys will fail
+  // because no D1 database with this id exists.
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "spoorthi-groups",
+      "database_id": "00000000-0000-4000-8000-000000000000",
+      "migrations_dir": "./drizzle"
+    }
+  ]
+}
