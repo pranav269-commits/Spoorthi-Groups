@@ -18,7 +18,7 @@
     {
       "binding": "DB",
       "database_name": "spoorthi-groups",
-      "database_id": "00000000-0000-4000-8000-000000000000",
+      "database_id": "9ae2b0ab-3287-4781-b117-2d48d5ad9a95",
       "migrations_dir": "./drizzle"
     }
   ]
