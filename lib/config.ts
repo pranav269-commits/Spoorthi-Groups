@@ -5,8 +5,8 @@ export const company = {
   phoneE164: '+918712121301',
   whatsapp: '918712121301',
   email: 'spoorthigroups22@gmail.com',
-  address: ['SLR Colony', 'Laxmi Nagar', 'Gundlapochampally', 'Hyderabad, Telangana 500100'],
-  addressStatus: 'REQUIRES_VERIFICATION' as const,
+  address: ['C-Block, Sanjana Aranya', 'Gundlapochampally, Medchal', 'Hyderabad'],
+  addressStatus: 'VERIFIED' as const,
   domain: 'https://spoorthigroups.in',
   logo: '/brand/spoorthi-groups-logo.png',
 };
