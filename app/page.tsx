@@ -9,9 +9,7 @@ import { company, createWhatsAppLink, services, social } from '@/lib/config';
 export default function Home() {
   return <PublicShell><main id="main-content">
     <section className="premium-home-hero">
-      <video className="hero-cinematic hero-video" autoPlay muted loop playsInline poster="/media/joint-family-hero-v2.png" aria-label="A multigenerational Indian family sharing a joyful evening together at home">
-        <source src="/media/family-cinematic-loop.mp4" type="video/mp4" media="(min-width: 601px)" />
-      </video>
+      <img className="hero-cinematic hero-desktop" src="/media/hero-desktop.jpg" alt="A father lifting his daughter at home while the mother smiles beside them" />
       <img className="hero-cinematic hero-still" src="/media/hero-mobile.jpg" alt="" aria-hidden="true" />
       <span className="hero-shade" aria-hidden="true"/><span className="protection-orbit orbit-one" aria-hidden="true"/><span className="protection-orbit orbit-two" aria-hidden="true"/>
       <div className="hero-signet"><img src={company.logo} alt="Spoorthi Groups"/><span>Guidance for generations</span></div>
