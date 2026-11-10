@@ -14,10 +14,16 @@ export const company = {
 export const social = {
   instagram: 'https://www.instagram.com/spoorthigroups22/',
   instagramLabel: '@spoorthigroups22',
-  facebook: null as string | null,
+  facebook: 'https://www.facebook.com/spoorthigroup/',
   facebookLabel: 'spoorthigroup',
   youtube: 'https://www.youtube.com/@SpoorthiGrps',
   youtubeLabel: '@SpoorthiGrps',
+  x: 'https://x.com/spoorthigroups',
+  xLabel: '@spoorthigroups',
+  linkedin: 'https://www.linkedin.com/in/spoorthigroups/',
+  linkedinLabel: 'spoorthigroups',
+  threads: 'https://www.threads.com/@spoorthigroups22',
+  threadsLabel: '@spoorthigroups22',
 };
 
 export const services = [

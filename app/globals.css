@@ -111,9 +111,10 @@ button { color:inherit; }
 .process-list p { margin:0; color:#b9cfdb; line-height:1.55; }
 .social-section { display:grid; grid-template-columns:minmax(260px,.8fr) 1.2fr; gap:6rem; padding:8rem clamp(1.25rem,7vw,7.5rem); background:var(--cream); }
 .social-section > div:first-child > p:last-child { color:var(--muted); line-height:1.7; max-width:520px; }
-.social-grid { display:grid; grid-template-columns:repeat(3,1fr); align-self:end; }
+.social-grid { display:grid; grid-template-columns:repeat(4,1fr); align-self:end; }
 .social-grid a { min-height:280px; position:relative; display:flex; flex-direction:column; padding:1.5rem; border:1px solid rgba(7,51,93,.16); border-right:0; background:#f9f7f1; transition:.25s ease; }
 .social-grid a:last-child { border-right:1px solid rgba(7,51,93,.16); }
+.social-grid a:nth-child(4n) { border-right:1px solid rgba(7,51,93,.16); }
 .social-grid a:hover { transform:translateY(-8px); background:white; box-shadow:0 25px 50px rgba(4,37,66,.1); }
 .social-grid span { width:42px; height:42px; display:grid; place-items:center; border-radius:50%; background:var(--navy); color:white; font-size:.7rem; font-weight:900; }
 .social-grid span svg { width:20px; height:20px; fill:#fff; display:block; }
@@ -379,3 +380,11 @@ button { color:inherit; }
 .chit-plan-card ul{margin:.2rem 0 .6rem;padding-left:1.1rem;color:#3d5563;font-size:.92rem;line-height:1.6}
 .chit-plan-card li{margin-top:.35rem}
 .chit-plan-card li::marker{color:var(--teal)}
+
+/* Mobile floating social rail: small round logos above the bottom action bar */
+.mobile-social-rail{display:none}
+@media(max-width:760px){
+.mobile-social-rail{position:fixed;z-index:49;right:12px;bottom:calc(66px + env(safe-area-inset-bottom) + 12px);display:flex;flex-direction:column;gap:8px}
+.mobile-social-rail a{width:40px;height:40px;display:grid;place-items:center;background:#fff;border:1px solid #e2e8ea;border-radius:50%;box-shadow:0 10px 25px rgba(4,37,66,.18)}
+.mobile-social-rail a svg{width:22px;height:22px;display:block}
+}
