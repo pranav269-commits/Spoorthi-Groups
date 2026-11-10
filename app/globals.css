@@ -365,3 +365,10 @@ button { color:inherit; }
 .chit-plans-note{max-width:820px;margin:3rem auto 0;color:#506570;line-height:1.7;text-align:center}
 @media(max-width:900px){.chit-summary-cards{grid-template-columns:repeat(2,1fr)}.chit-plan-cards{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.chit-summary-cards{grid-template-columns:1fr}.chit-plan-cards{grid-template-columns:1fr}.chit-company{padding:1.2rem}}
+
+/* Chits explainer (replaces the question + lenses sections on the Chits page only) */
+.chit-intro{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,5vw,6rem);align-items:start;padding:clamp(5rem,9vw,9rem) clamp(1.25rem,7vw,7.5rem);background:#f7f4ed}
+.chit-intro h2{margin-top:1rem;font-size:clamp(2.6rem,4.5vw,4.8rem);line-height:1.02;color:var(--navy)}
+.chit-intro>div:last-child p{color:#536872;font-size:1.05rem;line-height:1.7}
+.chit-intro>div:last-child p+p{margin-top:1rem}
+@media(max-width:760px){.chit-intro{grid-template-columns:1fr}}
