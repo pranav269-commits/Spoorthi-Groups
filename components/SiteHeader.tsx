@@ -10,7 +10,7 @@ export function SiteHeader() {
     <>
       <a className="skip-link" href="#main-content">Skip to content</a>
       <header className="site-header">
-        <a className="brand" href="/" aria-label="Spoorthi Groups home"><img src={company.logo} alt="Spoorthi Groups" /></a>
+        <a className="brand" href="/" aria-label="Spoorthi Groups home"><img src={company.emblem} alt="Spoorthi Groups" /><span className="brand-name">SPOORTHI GROUPS</span></a>
         <nav className="desktop-nav" aria-label="Main navigation">
           <div className="nav-services"><a href="/#services">Services <span aria-hidden="true">⌄</span></a><div className="service-menu">
             <p>Explore our guidance</p>{services.map((service) => <a key={service.slug} href={`/services/${service.slug}`}><span>{service.number}</span>{service.label}<b>↗</b></a>)}

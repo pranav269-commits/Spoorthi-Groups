@@ -9,6 +9,7 @@ export const company = {
   addressStatus: 'VERIFIED' as const,
   domain: 'https://spoorthigroups.in',
   logo: '/brand/spoorthi-groups-logo.png',
+  emblem: '/brand/spoorthi-groups-emblem.png',
 };
 
 export const social = {
