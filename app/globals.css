@@ -321,7 +321,7 @@ button { color:inherit; }
 .service-cinema-copy h1{color:white}
 
 /* Chits banner: homepage card + service hero */
-.service-poster img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.service-poster img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
 .service-cinema-banner{grid-template-columns:1fr;min-height:0}
 .service-cinema-banner .service-motion-poster{order:-1;min-height:clamp(300px,42vw,560px)}
 .service-cinema-banner .service-motion-poster img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 10%}
