@@ -4,7 +4,7 @@ export const company = {
   phoneDisplay: '+91 87121 21301',
   phoneE164: '+918712121301',
   whatsapp: '918712121301',
-  email: 'spoorthigroups22@gmail.com',
+  email: 'info@spoorthigroups.co.in',
   address: ['C-Block, Sanjana Aranya', 'Gundlapochampally, Medchal', 'Hyderabad'],
   addressStatus: 'VERIFIED' as const,
   domain: 'https://spoorthigroups.co.in',

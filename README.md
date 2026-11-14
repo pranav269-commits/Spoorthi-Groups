@@ -57,7 +57,7 @@ npm run build
 ## Admin setup
 
 The `/admin` route uses a password login (`/admin/login`). The admin identity
-is the company email `spoorthigroups22@gmail.com`; the password comes from
+is the company email `info@spoorthigroups.co.in`; the password comes from
 the `ADMIN_PASSWORD` secret and is never stored in the repo. A successful
 login sets a signed, HttpOnly session cookie (7 days). The portal reads real
 D1 data, supports search/filtering, status changes, notes, click-to-call,
