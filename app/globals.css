@@ -382,10 +382,15 @@ button { color:inherit; }
 .chit-plan-card li{margin-top:.35rem}
 .chit-plan-card li::marker{color:var(--teal)}
 
-/* Mobile floating social rail: small round logos above the bottom action bar */
+/* Mobile floating social rail: small round logos above the bottom action bar.
+   The rail slides away to the right when scrolling down, leaving a navy toggle
+   button; scrolling back up or tapping the button slides it back in. */
 .mobile-social-rail{display:none}
+.mobile-social-toggle{display:none}
 @media(max-width:760px){
-.mobile-social-rail{position:fixed;z-index:49;right:12px;bottom:calc(66px + env(safe-area-inset-bottom) + 12px);display:flex;flex-direction:column;gap:8px}
+.mobile-social-rail{position:fixed;z-index:49;right:12px;bottom:calc(66px + env(safe-area-inset-bottom) + 60px);display:flex;flex-direction:column;gap:8px;transition:transform .35s ease,opacity .3s ease,visibility 0s linear 0s}
 .mobile-social-rail a{width:40px;height:40px;display:grid;place-items:center;background:#fff;border:1px solid #e2e8ea;border-radius:50%;box-shadow:0 10px 25px rgba(4,37,66,.18)}
 .mobile-social-rail a svg{width:22px;height:22px;display:block}
+.mobile-social-rail.is-hidden{transform:translateX(72px);opacity:0;visibility:hidden;pointer-events:none;transition:transform .35s ease,opacity .3s ease,visibility 0s linear .35s}
+.mobile-social-toggle{position:fixed;z-index:50;right:12px;bottom:calc(66px + env(safe-area-inset-bottom) + 12px);width:40px;height:40px;display:grid;place-items:center;background:#032934;color:#fff;border:0;border-radius:50%;box-shadow:0 10px 25px rgba(4,37,66,.25);font-size:24px;line-height:1;cursor:pointer}
 }
