@@ -38,7 +38,7 @@ export const services = [
     whatsapp: 'Hello Spoorthi Groups, I would like to understand your Chit advisory options.',
   },
   {
-    slug: 'health-insurance', shortName: 'Health', label: 'Health insurance guidance', number: '02',
+    slug: 'health-insurance', shortName: 'Health', label: 'Health insurance advisory', number: '02',
     title: 'Protect the Life You Have Built.',
     theme: 'mint', symbol: '+', scene: 'Protection designed around real family life',
     summary: 'Explore important questions around family cover, waiting periods, hospitals and exclusions with help in plain language.',
@@ -47,7 +47,7 @@ export const services = [
     whatsapp: 'Hello Spoorthi Groups, I would like guidance regarding Health Insurance.',
   },
   {
-    slug: 'life-insurance', shortName: 'Life', label: 'Life insurance guidance', number: '03',
+    slug: 'life-insurance', shortName: 'Life', label: 'Life insurance advisory', number: '03',
     title: 'Protect Tomorrow for the People Who Matter Today.',
     theme: 'violet', symbol: '∞', scene: 'A promise that continues beyond today',
     summary: 'Discuss life protection goals, time horizons and family responsibilities before exploring provider options.',
@@ -56,7 +56,7 @@ export const services = [
     whatsapp: 'Hello Spoorthi Groups, I would like to discuss Life Insurance options.',
   },
   {
-    slug: 'loans', shortName: 'Loans', label: 'Loan guidance', number: '04',
+    slug: 'loans', shortName: 'Loans', label: 'Loan advisory', number: '04',
     title: 'Financing Should Begin With Clarity.',
     theme: 'cobalt', symbol: '↗', scene: 'A clearer route from requirement to readiness',
     summary: 'Get help understanding documentation, eligibility considerations and available routes for personal or business needs.',
@@ -65,7 +65,7 @@ export const services = [
     whatsapp: 'Hello Spoorthi Groups, I would like assistance regarding a loan requirement.',
   },
   {
-    slug: 'education-loans', shortName: 'Education Loans', label: 'Education loan guidance', number: '05',
+    slug: 'education-loans', shortName: 'Education Loans', label: 'Education loan advisory', number: '05',
     title: 'Education Should Not Wait for the Funds.',
     theme: 'emerald', symbol: '✎', scene: 'A clearer path from admission to funding',
     summary: 'Explore funding for studies in India and abroad — amounts, tenures, moratorium and documentation — before applying.',
@@ -74,7 +74,7 @@ export const services = [
     whatsapp: 'Hello Spoorthi Groups, I would like guidance regarding an education loan.',
   },
   {
-    slug: 'general-insurance', shortName: 'General Insurance', label: 'General insurance guidance', number: '06',
+    slug: 'general-insurance', shortName: 'General Insurance', label: 'General insurance advisory', number: '06',
     title: 'Everyday Risks, Covered Simply.',
     theme: 'crimson', symbol: '☂', scene: 'Protection for the things you use every day',
     summary: 'Explore cover for your car, home and travel — what is protected, what is excluded and how claims work.',
@@ -83,7 +83,7 @@ export const services = [
     whatsapp: 'Hello Spoorthi Groups, I would like guidance regarding general insurance.',
   },
   {
-    slug: 'real-estate', shortName: 'Property', label: 'Property guidance', number: '05',
+    slug: 'real-estate', shortName: 'Property', label: 'Property advisory', number: '05',
     title: 'Property Decisions Shape More Than an Address.',
     theme: 'terracotta', symbol: '⌂', scene: 'A place, an asset and a family decision',
     summary: 'Discuss residential or investment goals and receive guidance on the questions to ask before taking the next step.',
