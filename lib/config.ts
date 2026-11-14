@@ -7,7 +7,7 @@ export const company = {
   email: 'spoorthigroups22@gmail.com',
   address: ['C-Block, Sanjana Aranya', 'Gundlapochampally, Medchal', 'Hyderabad'],
   addressStatus: 'VERIFIED' as const,
-  domain: 'https://spoorthigroups.in',
+  domain: 'https://spoorthigroups.co.in',
   logo: '/brand/spoorthi-groups-logo.png',
   emblem: '/brand/spoorthi-groups-emblem.png',
 };

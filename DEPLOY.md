@@ -68,13 +68,13 @@ set, and check the enquiry is listed.
 ## 6. Add the custom domain (after buying it)
 
 1. In the Cloudflare dashboard, open Workers & Pages → `spoorthi-groups` →
-   Settings → Custom Domains → Add `spoorthigroups.in`.
+   Settings → Custom Domains → Add `spoorthigroups.co.in`.
 2. Cloudflare will tell you what DNS to set. In Hostinger (where the domain
    was bought), point the domain at Cloudflare as instructed — usually by
    changing the domain's nameservers to Cloudflare's, or adding the CNAME
    record Cloudflare shows.
 3. Wait for DNS to propagate (minutes to a few hours). SSL is automatic.
-4. `NEXT_PUBLIC_SITE_URL` is already `https://spoorthigroups.in` in
+4. `NEXT_PUBLIC_SITE_URL` is already `https://spoorthigroups.co.in` in
    `wrangler.jsonc` and in `lib/config.ts`, so no code change is needed. If
    you deploy through Workers Builds, also set `NEXT_PUBLIC_SITE_URL` as a
    build variable there (the layout falls back to `lib/config.ts` if it is

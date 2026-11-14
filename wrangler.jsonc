@@ -8,7 +8,7 @@
   // deploy` supplies both at deploy time.
   "compatibility_date": "2026-01-01",
   "vars": {
-    "NEXT_PUBLIC_SITE_URL": "https://spoorthigroups.in"
+    "NEXT_PUBLIC_SITE_URL": "https://spoorthigroups.co.in"
   },
   // D1 database for enquiries. Create it first (see DEPLOY.md) and replace
   // the placeholder database_id below with the real id from

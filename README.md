@@ -31,7 +31,7 @@ ADMIN_PASSWORD=change-me-locally-only
 
 ## Environment
 
-Copy `.env.example` to `.env.local` for local configuration. When connecting the final domain, set `NEXT_PUBLIC_SITE_URL=https://spoorthigroups.in`.
+Copy `.env.example` to `.env.local` for local configuration. When connecting the final domain, set `NEXT_PUBLIC_SITE_URL=https://spoorthigroups.co.in`.
 
 Email notifications are intentionally inactive until a real provider is integrated and `EMAIL_API_KEY` plus `NOTIFICATION_EMAIL` are configured. The enquiry database works without email.
 
@@ -77,10 +77,10 @@ is unset, `ADMIN_PASSWORD` is used as the signing key instead.
 See `DEPLOY.md` for the full Cloudflare Workers deployment steps: create the
 D1 database, fill in its `database_id` in `wrangler.jsonc`, set the
 `ADMIN_PASSWORD` secret, then run `npx @vinext/cloudflare deploy`. To connect
-`spoorthigroups.in`, add it as a custom domain on the Worker in the Cloudflare
+`spoorthigroups.co.in`, add it as a custom domain on the Worker in the Cloudflare
 dashboard, then point the domain's DNS at Cloudflare from the registrar. No
 code change is needed for the domain — `NEXT_PUBLIC_SITE_URL` is already
-`https://spoorthigroups.in` in `wrangler.jsonc` and `lib/config.ts`.
+`https://spoorthigroups.co.in` in `wrangler.jsonc` and `lib/config.ts`.
 
 ## Business data requiring verification
 
